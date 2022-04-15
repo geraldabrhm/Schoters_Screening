@@ -1,1 +1,2 @@
-# Schoters_Screening
+# Schoters Screening
+Nama: Gerald Abraham Sianturi
