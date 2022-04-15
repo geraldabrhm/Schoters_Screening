@@ -2,12 +2,14 @@
 -- 2a) Total transaksi dari masing-masing customer
 SELECT id_customer, nama_customer, SUM(harga_asli) AS total_transaksi FROM transaksi
 NATURAL JOIN customer
-GROUP BY customer.id_customer;
+GROUP BY customer.id_customer
+ORDER BY total_transaksi DESC;
 
--- 2b) Total transaksi dari masing-masing customer
+-- 2b) Total transaksi dari masing-masing kota
 SELECT domisili AS wilayah, SUM(harga_asli) AS total_transaksi FROM transaksi
 NATURAL JOIN customer
-GROUP BY domisili;
+GROUP BY domisili
+ORDER BY total_transaksi DESC;
 
 ---- 3 Exploratory Data Analysis
 --- Dataset - Count null values from each table
